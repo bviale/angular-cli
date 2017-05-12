@@ -121,7 +121,7 @@ class JsonWebpackSerializer {
     this.variables['entryPoints'] = JSON.stringify(chunksSortMode.entryPoints);
     return Object.assign({}, value.options, {
       template: './' + path.relative(this._root, value.options.template),
-      filename: './' + path.relative(this._dist, value.options.filename),
+      filename: './' + path.relative(this._root, value.options.filename),
       chunksSortMode: this._serializeFunction(chunksSortMode)
     });
   }

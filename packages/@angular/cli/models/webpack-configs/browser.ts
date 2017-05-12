@@ -34,7 +34,7 @@ export function getBrowserConfig(wco: WebpackConfigOptions) {
     plugins: [
       new HtmlWebpackPlugin({
         template: path.resolve(appRoot, appConfig.index),
-        filename: path.resolve(buildOptions.outputPath, appConfig.index),
+        filename: path.resolve(appRoot, appConfig.index),
         chunksSortMode: packageChunkSort(appConfig),
         excludeChunks: lazyChunks,
         xhtml: true
